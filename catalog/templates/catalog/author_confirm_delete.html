@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Удаление {{ author }}{% endblock %}
+
+{% block content %}
+
+<h1>Удаление автора</h1>
+<p>Вы уверены, что хотите удлаить {{ author }}?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Да, удалить" />
+    
+</form>
+{% endblock %}

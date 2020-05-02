@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Одолженные книги{% endblock %}
+
+{% block content %}
+    <h1>Одолженные книги</h1>
+
+    {% if bookinstance_list %}
+    <ul>
+
+      {% for bookinst in bookinstance_list %} 
+      <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'catalog:book-detail' bookinst.book.pk %}">{{bookinst.book.title}}</a> ({{ bookinst.due_back }}) - {{ bookinst.borrower }} - 
+        <a href="{% url 'catalog:renew-book-librarian' bookinst.id %}">Обновить</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>У вас нет одолженных книг.</p>
+    {% endif %}       
+{% endblock %}

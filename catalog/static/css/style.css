@@ -1,0 +1,17 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+.container-fluid {
+	margin-top: 35px;
+}
+.form-table td {
+	padding: 7px;
+}
+.form-table th {
+	padding-right: 7px;
+}
+.form-table .helptext {
+	font-style: italic;
+}	

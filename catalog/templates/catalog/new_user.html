@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Новый пользователь{% endblock %}
+
+{% block content %}
+
+<h1>Новый пользователь</h1>
+<br>
+
+{% if not user.is_authenticated %}
+<form action="" method="post">
+    {% csrf_token %}
+    <table class="form-table">
+   		{{ form }}
+    </table>
+    <br>
+    <input type="submit" value="Сохранить" />
+
+</form>
+{% else %}
+<p>Вы уже вошли!</p>
+{% endif %}
+{% endblock %}

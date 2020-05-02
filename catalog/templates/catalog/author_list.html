@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Авторы{% endblock %}
+
+{% block content %}
+    <h1>Авторы</h1>
+
+    {% if author_list %}
+    <ul>
+
+      {% for a in author_list %}
+      <li>
+        <a href="{{ a.get_absolute_url }}">{{ a }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+    <p>В библиотеке нет ни одного автора.</p>
+    {% endif %}       
+{% endblock %}

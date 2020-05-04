@@ -135,10 +135,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-<<<<<<< HEAD
-=======
 #email in terminal
->>>>>>> 8def25e8db1a70e818036c3020f0c35e4d6c77e8
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Heroku: Update database configuration from $DATABASE_URL.

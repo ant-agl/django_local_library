@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get(
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [
-    'quiet-plateau-76980',
+    'quiet-plateau-76980.herokuapp.com',
 ]
 
 
